@@ -11,6 +11,7 @@
         <AssemblyName>NKHook6_Impl</AssemblyName>
         <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
+        <Nullable>disable</Nullable>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,6 +22,7 @@
         <DefineConstants>DEBUG;TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
+		<LangVersion>8.0</LangVersion>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +32,7 @@
         <DefineConstants>TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
+		<LangVersion>8.0</LangVersion>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -570,7 +573,75 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Entry.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Bloons\IBloon.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Bloons\IBloonEntity.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\CommandManager.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Bloons\CreatedEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Bloons\DamagedEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Bloons\DeletedEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Bloons\LeakedEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Bloons\MoveEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Bloons\RotateEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Event.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\EventAttribute.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\EventBaseCancellable.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\EventRegistry.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Game\DefeatedEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Game\RoundEndEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Game\RoundStartEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Game\StartMatchEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Game\VictoryEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\KeyEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Player\CashChangedEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Player\CashGainedEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Player\CashLostEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Player\HealthChangedEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Player\HealthGainedEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Player\HealthLostEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Projectile\CreatedEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Projectile\DeletedEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Towers\CreatedEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Towers\DeletedEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Towers\DeselectedEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Towers\SelectedEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Towers\SoldEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Towers\UpgradeEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\UnknownEventException.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\UpdateEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Weapons\CreatedEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Events\Weapons\DeletedEvent.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Game\IGame.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Game\IPlayer.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Registry\BloonRegistry.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Registry\Registry.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Registry\TowerRegistry.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Towers\ITower.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Towers\ITowerEntity.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Towers\Projectiles\IProjectile.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Towers\Projectiles\IProjectileEntity.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Towers\Upgrades\IUpgrade.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Towers\Weapons\IWeapon.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="NKHook6-API\.git" />
+      <Content Include="NKHook6-API\.gitattributes" />
+      <Content Include="NKHook6-API\.github\workflows\build-api.yml" />
+      <Content Include="NKHook6-API\.gitignore" />
+      <Content Include="NKHook6-API\LICENSE" />
+      <Content Include="NKHook6-API\NKHook6-API\.idea\.idea.NKHook6-API\.idea\codeStyles\codeStyleConfig.xml" />
+      <Content Include="NKHook6-API\NKHook6-API\.idea\.idea.NKHook6-API\.idea\contentModel.xml" />
+      <Content Include="NKHook6-API\NKHook6-API\.idea\.idea.NKHook6-API\.idea\discord.xml" />
+      <Content Include="NKHook6-API\NKHook6-API\.idea\.idea.NKHook6-API\.idea\encodings.xml" />
+      <Content Include="NKHook6-API\NKHook6-API\.idea\.idea.NKHook6-API\.idea\indexLayout.xml" />
+      <Content Include="NKHook6-API\NKHook6-API\.idea\.idea.NKHook6-API\.idea\modules.xml" />
+      <Content Include="NKHook6-API\NKHook6-API\.idea\.idea.NKHook6-API\.idea\projectSettingsUpdater.xml" />
+      <Content Include="NKHook6-API\NKHook6-API\.idea\.idea.NKHook6-API\.idea\vcs.xml" />
+      <Content Include="NKHook6-API\NKHook6-API\.idea\.idea.NKHook6-API\.idea\workspace.xml" />
+      <Content Include="NKHook6-API\NKHook6-API\.idea\.idea.NKHook6-API\riderModule.iml" />
+      <Content Include="NKHook6-API\NKHook6-API\NKHook6-API.csproj" />
+      <Content Include="NKHook6-API\NKHook6-API\NKHook6-API.sln" />
+      <Content Include="NKHook6-API\README.md" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
