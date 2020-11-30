@@ -575,7 +575,6 @@
         <Compile Include="Entry.cs" />
         <Compile Include="NKHook6-API\NKHook6-API\Bloons\IBloon.cs" />
         <Compile Include="NKHook6-API\NKHook6-API\Bloons\IBloonEntity.cs" />
-        <Compile Include="NKHook6-API\NKHook6-API\CommandManager.cs" />
         <Compile Include="NKHook6-API\NKHook6-API\Events\Bloons\CreatedEvent.cs" />
         <Compile Include="NKHook6-API\NKHook6-API\Events\Bloons\DamagedEvent.cs" />
         <Compile Include="NKHook6-API\NKHook6-API\Events\Bloons\DeletedEvent.cs" />
@@ -610,8 +609,11 @@
         <Compile Include="NKHook6-API\NKHook6-API\Events\UpdateEvent.cs" />
         <Compile Include="NKHook6-API\NKHook6-API\Events\Weapons\CreatedEvent.cs" />
         <Compile Include="NKHook6-API\NKHook6-API\Events\Weapons\DeletedEvent.cs" />
-        <Compile Include="NKHook6-API\NKHook6-API\Game\IGame.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Game\IGameInstance.cs" />
         <Compile Include="NKHook6-API\NKHook6-API\Game\IPlayer.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Game\Map\IMap.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Game\Map\IMapObject.cs" />
+        <Compile Include="NKHook6-API\NKHook6-API\Game\Map\IPath.cs" />
         <Compile Include="NKHook6-API\NKHook6-API\Registry\BloonRegistry.cs" />
         <Compile Include="NKHook6-API\NKHook6-API\Registry\Registry.cs" />
         <Compile Include="NKHook6-API\NKHook6-API\Registry\TowerRegistry.cs" />
