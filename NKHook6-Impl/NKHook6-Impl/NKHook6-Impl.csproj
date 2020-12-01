@@ -574,8 +574,18 @@
   <ItemGroup>
     <Compile Include="Entry.cs" />
     <Compile Include="Event-Patches\Bloons\CreatedPatch.cs" />
+    <Compile Include="Extensions\GameExt.cs" />
+    <Compile Include="Implementations\Bloons\BlueBloon.cs" />
+    <Compile Include="Implementations\Bloons\BlueCamoBloon.cs" />
+    <Compile Include="Implementations\Bloons\BlueRegrowBloon.cs" />
+    <Compile Include="Implementations\Bloons\BlueRegrowCamoBloon.cs" />
     <Compile Include="Implementations\Bloons\NBloon.cs" />
     <Compile Include="Implementations\Bloons\NBloonEntity.cs" />
+    <Compile Include="Implementations\Bloons\RedBloon.cs" />
+    <Compile Include="Implementations\Bloons\RedBloonEntity.cs" />
+    <Compile Include="Implementations\Bloons\RedCamoBloon.cs" />
+    <Compile Include="Implementations\Bloons\RedRegrowBloon.cs" />
+    <Compile Include="Implementations\Bloons\RedRegrowCamoBloon.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="NKHook6-API\NKHook6-API\Bloons\IBloon.cs" />
     <Compile Include="NKHook6-API\NKHook6-API\Bloons\IBloonEntity.cs" />

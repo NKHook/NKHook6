@@ -13,9 +13,9 @@ namespace NKHook6_Impl.Bloons
     public class CreatedPatch
     {
         [HarmonyPostfix]
-        internal static void Postfix(Bloon bloon)
+        internal static void Postfix(Bloon __instance)
         {
-            NBloonEntity bloonEntity = new NBloonEntity(bloon);
+            NBloonEntity bloonEntity = new NBloonEntity(__instance);
             var o = new BloonEvents.CreatedEvent(bloonEntity); //Create CreatedEvent instance
             EventRegistry.instance.dispatchEvent(ref o); //Dispatch it
         }
