@@ -43,9 +43,13 @@ namespace NKHook6_Impl
         public static void onMove(BloonEvents.MoveEvent e)
         {
             IBloonEntity bloon = e.bloon;
-            Logger.Log("Progress: "+bloon.getProgress());
+            //Logger.Log("Progress: "+bloon.getProgress());
             float[] pos = bloon.getPosition();
-            Logger.Log("Position (X,Y,Z)".Replace("X", pos[0].ToString()).Replace("Y", pos[1].ToString()).Replace("Z", pos[2].ToString()));
+            //Logger.Log("Position (X,Y,Z)".Replace("X", pos[0].ToString()).Replace("Y", pos[1].ToString()).Replace("Z", pos[2].ToString()));
+            if (bloon.getProgress() > 500)
+            {
+                e.SetCancelled(true);
+            }
         }
         
         [HarmonyPatch(typeof(TitleScreen), "Start")]
