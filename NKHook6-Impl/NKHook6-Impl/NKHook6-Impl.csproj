@@ -573,6 +573,9 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Entry.cs" />
+        <Compile Include="Event-Patches\Bloons\CreatedPatch.cs" />
+        <Compile Include="Implementations\Bloons\NBloon.cs" />
+        <Compile Include="Implementations\Bloons\NBloonEntity.cs" />
         <Compile Include="Logger.cs" />
         <Compile Include="NKHook6-API\NKHook6-API\Bloons\IBloon.cs" />
         <Compile Include="NKHook6-API\NKHook6-API\Bloons\IBloonEntity.cs" />
