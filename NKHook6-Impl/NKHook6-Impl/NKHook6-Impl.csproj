@@ -574,6 +574,7 @@
   <ItemGroup>
     <Compile Include="Entry.cs" />
     <Compile Include="Event-Patches\Bloons\CreatedPatch.cs" />
+    <Compile Include="Event-Patches\Bloons\LeakedPatch.cs" />
     <Compile Include="Event-Patches\Bloons\MovePatch.cs" />
     <Compile Include="Extensions\GameExt.cs" />
     <Compile Include="Implementations\Bloons\BlueBloon.cs" />
