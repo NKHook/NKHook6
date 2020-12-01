@@ -6,6 +6,7 @@ using Assets.Scripts.Unity;
 using Assets.Scripts.Unity.UI_New.Main;
 using Harmony;
 using MelonLoader;
+using NKHook6.API.Events;
 using NKHook6_Impl.Extensions;
 
 namespace NKHook6_Impl
@@ -16,6 +17,9 @@ namespace NKHook6_Impl
         {
             base.OnApplicationStart();
             Logger.Log("Starting NKHook6 API Implementation");
+
+            new EventRegistry(); //Initialize EventRegistry
+
             Logger.Log("Google translate of NKHook6 API to TARGET has begun".Replace("TARGET", "BloonsTD6"));
         }
 
