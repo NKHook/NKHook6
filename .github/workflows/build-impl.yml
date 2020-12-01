@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: NKHook6-Build
-          path: build\NKHook6-Impl.dll
+          path: build\NKHook6_Impl.dll
       
       - name: Create a Release
         uses: actions/create-release@v1.1.4
@@ -61,6 +61,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: build\NKHook6-Impl.dll
+          asset_path: build\NKHook6_Impl.dll
           asset_name: NKHook6.dll
           asset_content_type: application/dll
