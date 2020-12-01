@@ -38,6 +38,10 @@ namespace NKHook6_Impl
         public static void onCreated(BloonEvents.CreatedEvent e)
         {
             Logger.Log("Bloon created event");
+        }
+        [EventAttribute("BloonMoveEvent")]
+        public static void onMove(BloonEvents.MoveEvent e)
+        {
             IBloonEntity bloon = e.bloon;
             Logger.Log("Progress: "+bloon.getProgress());
             float[] pos = bloon.getPosition();
