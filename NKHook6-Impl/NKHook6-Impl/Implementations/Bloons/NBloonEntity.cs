@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Simulation.Bloons;
+using Assets.Scripts.Simulation.SMath;
 using NKHook6.API.Bloons;
 
 namespace NKHook6_Impl.Implementations
@@ -18,12 +19,14 @@ namespace NKHook6_Impl.Implementations
 
         public float getProgress()
         {
-            throw new System.NotImplementedException();
+            return this.theBloon.distanceTraveled;
         }
 
         public float[] getPosition()
         {
-            throw new System.NotImplementedException();
+            Vector3Boxed pos = this.theBloon.Position;
+            float[] posF = new[] {pos.X, pos.Y, pos.Z};
+            return posF;
         }
     }
 }
