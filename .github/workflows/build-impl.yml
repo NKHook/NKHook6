@@ -29,6 +29,9 @@ jobs:
       - name: Setup MSBUILD
         uses: microsoft/setup-msbuild@v1.0.2
       
+      - name: Pull API
+        run: git submodule update --init --recursive
+      
       - name: Build Implementation
         run: msbuild NKHook6-Impl/NKHook6-Impl.sln /p:Configuration=Release
 
