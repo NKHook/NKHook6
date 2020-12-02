@@ -1,8 +1,12 @@
-﻿using Assets.Scripts.Simulation.Bloons;
+﻿using System;
+using System.Linq;
+using System.Reflection;
+using Assets.Scripts.Simulation.Bloons;
 using Assets.Scripts.Simulation.SMath;
+using Mono.CSharp;
 using NKHook6.API.Bloons;
 
-namespace NKHook6_Impl.Implementations
+namespace NKHook6_Impl.Implementations.Bloons
 {
     public class NBloonEntity : IBloonEntity
     {
@@ -14,7 +18,22 @@ namespace NKHook6_Impl.Implementations
 
         public IBloon getType()
         {
-            throw new System.NotImplementedException();
+            string className = theBloon.bloonModel.name+"Bloon";
+            var types = Assembly
+                .GetExecutingAssembly()
+                .GetTypes()
+                .Where(t => t.Namespace.StartsWith("NKHook6_Impl.Implementations.Bloons"));
+
+            foreach (Type classType in types)
+            {
+                if (classType.Name == className)
+                {
+                    NBloon bloonWithType = (NBloon)Activator.CreateInstance(classType);
+                    return bloonWithType;
+                }
+            }
+
+            return new NBloon(theBloon.bloonModel);
         }
 
         public float getProgress()

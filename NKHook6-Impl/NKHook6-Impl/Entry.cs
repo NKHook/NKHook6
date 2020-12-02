@@ -8,6 +8,7 @@ using NKHook6.API.Bloons;
 using NKHook6.API.Events;
 using NKHook6.API.Events._Bloons;
 using NKHook6_Impl.Extensions;
+using NKHook6_Impl.Implementations.Bloons;
 
 namespace NKHook6_Impl
 {
@@ -38,6 +39,11 @@ namespace NKHook6_Impl
         public static void onCreated(BloonEvents.CreatedEvent e)
         {
             Logger.Log("Bloon created event");
+            IBloon bloonType = e.bloon.getType();
+            if (bloonType is RedBloon)
+            {
+                Logger.Log("The bloon was a red bloon");
+            }
         }
         
         [EventAttribute("BloonLeakedEvent")]

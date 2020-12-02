@@ -1,7 +1,7 @@
 ﻿using Assets.Scripts.Models.Bloons;
 using NKHook6.API.Bloons;
 
-namespace NKHook6_Impl.Implementations
+namespace NKHook6_Impl.Implementations.Bloons
 {
     public class NBloon : IBloon
     {

@@ -1,4 +1,4 @@
-﻿namespace NKHook6_Impl.Implementations
+﻿namespace NKHook6_Impl.Implementations.Bloons
 {
     public class RedRegrowCamoBloon : RedBloon
     {
