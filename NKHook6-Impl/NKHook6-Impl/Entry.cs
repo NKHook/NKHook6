@@ -42,6 +42,7 @@ namespace NKHook6_Impl
             IBloon bloonType = e.bloon.getType();
             if (bloonType is RedBloon)
             {
+                RedBloon newType = (RedBloon)bloonType;
                 Logger.Log("The bloon was a red bloon");
             }
         }

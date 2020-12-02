@@ -7,7 +7,7 @@ using NKHook6_Impl.Implementations.Bloons;
 namespace NKHook6_Impl.Bloons
 {
     [HarmonyPatch(typeof(Bloon), "Process")]
-    public class MovePatch
+    internal class MovePatch
     {
         [HarmonyPrefix]
         internal static bool Prefix(Bloon __instance, int elapsed)

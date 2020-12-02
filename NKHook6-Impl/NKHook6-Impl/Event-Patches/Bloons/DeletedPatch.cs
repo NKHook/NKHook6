@@ -6,14 +6,14 @@ using NKHook6_Impl.Implementations.Bloons;
 
 namespace NKHook6_Impl.Bloons
 {
-    [HarmonyPatch(typeof(Bloon), "Leaked")]
-    internal class LeakedPatch
+    [HarmonyPatch(typeof(Bloon), "OnDestroy")]
+    internal class DeletedPatch
     {
         [HarmonyPrefix]
         internal static bool Prefix(Bloon __instance)
         {
             NBloonEntity bloonEntity = new NBloonEntity(__instance);
-            var o = new BloonEvents.LeakedEvent(bloonEntity); //Create LeakedEvent instance
+            var o = new BloonEvents.DeletedEvent(bloonEntity); //Create LeakedEvent instance
             EventRegistry.instance.dispatchEvent(ref o); //Dispatch it
             return !o.isCancelled();
         }
