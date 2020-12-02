@@ -39,7 +39,7 @@ namespace NKHook6_Impl
         public static void onCreated(BloonEvents.CreatedEvent e)
         {
             Logger.Log("Bloon created event");
-            IBloon bloonType = e.bloon.getType();
+            IBloon bloonType = e.getBloon().getType();
             if (bloonType is RedBloon)
             {
                 RedBloon newType = (RedBloon)bloonType;
@@ -56,7 +56,7 @@ namespace NKHook6_Impl
         [EventAttribute("BloonMoveEvent")]
         public static void onMove(BloonEvents.MoveEvent e)
         {
-            IBloonEntity bloon = e.bloon;
+            IBloonEntity bloon = e.getBloon();
             //Logger.Log("Progress: "+bloon.getProgress());
             float[] pos = bloon.getPosition();
             //Logger.Log("Position (X,Y,Z)".Replace("X", pos[0].ToString()).Replace("Y", pos[1].ToString()).Replace("Z", pos[2].ToString()));

@@ -592,6 +592,7 @@
     <Compile Include="Logger.cs" />
     <Compile Include="NKHook6-API\NKHook6-API\Bloons\IBloon.cs" />
     <Compile Include="NKHook6-API\NKHook6-API\Bloons\IBloonEntity.cs" />
+    <Compile Include="NKHook6-API\NKHook6-API\Events\Bloons\BloonEvent.cs" />
     <Compile Include="NKHook6-API\NKHook6-API\Events\Bloons\CreatedEvent.cs" />
     <Compile Include="NKHook6-API\NKHook6-API\Events\Bloons\DamagedEvent.cs" />
     <Compile Include="NKHook6-API\NKHook6-API\Events\Bloons\DeletedEvent.cs" />
