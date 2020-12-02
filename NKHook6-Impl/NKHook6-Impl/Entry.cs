@@ -39,6 +39,13 @@ namespace NKHook6_Impl
         {
             Logger.Log("Bloon created event");
         }
+        
+        [EventAttribute("BloonLeakedEvent")]
+        public static void onLeaked(BloonEvents.LeakedEvent e)
+        {
+            Logger.Log("Bloon leaked event");
+        }
+        
         [EventAttribute("BloonMoveEvent")]
         public static void onMove(BloonEvents.MoveEvent e)
         {
