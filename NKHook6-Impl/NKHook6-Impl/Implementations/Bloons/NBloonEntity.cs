@@ -47,5 +47,10 @@ namespace NKHook6_Impl.Implementations.Bloons
             float[] posF = new[] {pos.X, pos.Y, pos.Z};
             return posF;
         }
+        
+        public float getRotation()
+        {
+            return this.theBloon.Rotation;
+        }
     }
 }
