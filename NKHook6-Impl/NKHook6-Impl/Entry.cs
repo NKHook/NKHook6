@@ -65,7 +65,14 @@ namespace NKHook6_Impl
                 e.SetCancelled(true);
             }
         }
-        
+
+        [EventAttribute("BloonRotateEvent")]
+        public static void onRotate(BloonEvents.RotateEvent e)
+        {
+            IBloonEntity bloon = e.getBloon();
+            Logger.Log(bloon.getRotation().ToString());
+        }
+
         [HarmonyPatch(typeof(TitleScreen), "Start")]
         class LoadHook
         {
