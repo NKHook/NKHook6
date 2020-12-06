@@ -578,6 +578,7 @@
     <Compile Include="Event-Patches\Bloons\LeakedPatch.cs" />
     <Compile Include="Event-Patches\Bloons\MovePatch.cs" />
     <Compile Include="Event-Patches\Bloons\RotatePatch.cs" />
+    <Compile Include="Event-Patches\Other\TitleScreen\StartPatch.cs" />
     <Compile Include="Extensions\GameExt.cs" />
     <Compile Include="Implementations\Bloons\BlueBloon.cs" />
     <Compile Include="Implementations\Bloons\BlueCamoBloon.cs" />
@@ -590,6 +591,7 @@
     <Compile Include="Implementations\Bloons\RedCamoBloon.cs" />
     <Compile Include="Implementations\Bloons\RedRegrowBloon.cs" />
     <Compile Include="Implementations\Bloons\RedRegrowCamoBloon.cs" />
+    <Compile Include="Implementations\BTDModStart.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="NKHook6-API\NKHook6-API\Bloons\IBloon.cs" />
     <Compile Include="NKHook6-API\NKHook6-API\Bloons\IBloonEntity.cs" />

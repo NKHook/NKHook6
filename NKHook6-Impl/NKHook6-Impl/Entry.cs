@@ -12,7 +12,7 @@ using NKHook6_Impl.Implementations.Bloons;
 
 namespace NKHook6_Impl
 {
-    public class Entry : MelonMod
+    public class Entry : MelonMod, BTDModStart
     {
         public override void OnApplicationStart()
         {
@@ -22,17 +22,6 @@ namespace NKHook6_Impl
             new EventRegistry(); //Initialize EventRegistry
 
             Logger.Log("Google translate of NKHook6 API to TARGET has begun".Replace("TARGET", "BloonsTD6"));
-        }
-
-        public static void OnSafeGameStart()
-        {
-            Game game = Game.instance;
-            List<BloonModel> models = game.getAllBloonModels();
-            foreach (var model in models)
-            {
-                Logger.Log(model.name);
-            }
-            EventRegistry.instance.listen(typeof(Entry));
         }
 
         [EventAttribute("BloonCreatedEvent")]
@@ -73,14 +62,14 @@ namespace NKHook6_Impl
             Logger.Log(bloon.getRotation().ToString());
         }
 
-        [HarmonyPatch(typeof(TitleScreen), "Start")]
-        class LoadHook
+        public void onGameLoaded(Game game)
         {
-            [HarmonyPostfix]
-            internal static void Postfix(TitleScreen __instance)
+            List<BloonModel> models = game.getAllBloonModels();
+            foreach (var model in models)
             {
-                OnSafeGameStart();
+                Logger.Log(model.name);
             }
+            EventRegistry.instance.listen(typeof(Entry));
         }
     }
 }
