@@ -5,6 +5,7 @@ using Assets.Scripts.Unity;
 using Harmony;
 using Assets.Main.Scenes;
 using MelonLoader;
+using NKHook6.API;
 
 namespace NKHook6_Impl.Other._TitleScreen
 {
@@ -20,7 +21,7 @@ namespace NKHook6_Impl.Other._TitleScreen
                 if (mod is BTDModStart)
                 {
                     BTDModStart modStart = (BTDModStart)mod;
-                    modStart.onGameLoaded(Game.instance);
+                    modStart.onModLoaded();
                 }
             }
         }

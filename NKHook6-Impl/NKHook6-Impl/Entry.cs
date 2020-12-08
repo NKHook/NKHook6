@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using Assets.Main.Scenes;
 using Assets.Scripts.Models.Bloons;
 using Assets.Scripts.Unity;
-using Harmony;
 using MelonLoader;
+using NKHook6.API;
 using NKHook6.API.Bloons;
 using NKHook6.API.Events;
 using NKHook6.API.Events._Bloons;
@@ -62,8 +61,9 @@ namespace NKHook6_Impl
             Logger.Log(bloon.getRotation().ToString());
         }
 
-        public void onGameLoaded(Game game)
+        public void onModLoaded()
         {
+            Game game = Game.instance;
             List<BloonModel> models = game.getAllBloonModels();
             foreach (var model in models)
             {

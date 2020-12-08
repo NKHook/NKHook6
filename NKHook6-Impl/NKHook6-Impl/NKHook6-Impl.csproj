@@ -426,10 +426,10 @@
     <Reference Include="SystemWebTestShim, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\..\References\SystemWebTestShim.dll</HintPath>
     </Reference>
-    <Reference Include="UnhollowerBaseLib, Version=0.4.9.0, Culture=neutral, PublicKeyToken=null">
+    <Reference Include="UnhollowerBaseLib, Version=0.4.10.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\References\UnhollowerBaseLib.dll</HintPath>
     </Reference>
-    <Reference Include="UnhollowerRuntimeLib, Version=0.4.9.0, Culture=neutral, PublicKeyToken=null">
+    <Reference Include="UnhollowerRuntimeLib, Version=0.4.10.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\References\UnhollowerRuntimeLib.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Addressables, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
@@ -479,9 +479,6 @@
     </Reference>
     <Reference Include="UnityEngine.GridModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\References\UnityEngine.GridModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Il2CppAssetBundleManager, Version=0.2.7.2, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\References\UnityEngine.Il2CppAssetBundleManager.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\References\UnityEngine.ImageConversionModule.dll</HintPath>
@@ -591,10 +588,10 @@
     <Compile Include="Implementations\Bloons\RedCamoBloon.cs" />
     <Compile Include="Implementations\Bloons\RedRegrowBloon.cs" />
     <Compile Include="Implementations\Bloons\RedRegrowCamoBloon.cs" />
-    <Compile Include="Implementations\BTDModStart.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="NKHook6-API\NKHook6-API\Bloons\IBloon.cs" />
     <Compile Include="NKHook6-API\NKHook6-API\Bloons\IBloonEntity.cs" />
+    <Compile Include="NKHook6-API\NKHook6-API\BTDModStart.cs" />
     <Compile Include="NKHook6-API\NKHook6-API\Events\Bloons\BloonEvent.cs" />
     <Compile Include="NKHook6-API\NKHook6-API\Events\Bloons\CreatedEvent.cs" />
     <Compile Include="NKHook6-API\NKHook6-API\Events\Bloons\DamagedEvent.cs" />
