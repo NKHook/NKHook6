@@ -351,3 +351,10 @@ MigrationBackup/
 
 .idea/
 build/
+*.vcxproj
+*.filters
+*.cmake
+CMakeFiles/
+*.sln
+*.csproj
+CMakeCache.txt
