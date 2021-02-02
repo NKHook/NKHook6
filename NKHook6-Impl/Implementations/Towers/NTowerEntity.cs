@@ -4,19 +4,19 @@ using System.Reflection;
 using Assets.Scripts.Models.Towers;
 using Assets.Scripts.Simulation.SMath;
 using Assets.Scripts.Simulation.Towers;
-using NKHook6.API.Bloons;
 using NKHook6.API.Towers;
 
-namespace NKHook6_Impl.Implementations.Bloons
+namespace NKHook6_Impl.Implementations.Towers
 {
-    public class NTowerEntity : ImplementationInstanceBase<Tower, NTower, TowerModel>, IBloonEntity
+    public class NTowerEntity : ITowerEntity
     {
-        public NTowerEntity(Tower theTower) : base(theTower)
+        private Tower theTower;
+        public NTowerEntity(Tower theTower)
         {
-            
+            this.theTower = theTower;
         }
 
-        public ITower getType()
+        public ITower getTower()
         {
             string className = theTower.towerModel.name+"Tower";
             var types = Assembly
@@ -33,24 +33,18 @@ namespace NKHook6_Impl.Implementations.Bloons
                 }
             }
 
-            return new NTower(theBloon.bloonModel);
-        }
-
-        public float getProgress()
-        {
-            return this.theBloon.distanceTraveled;
+            return new NTower(this.theTower.towerModel);
         }
 
         public float[] getPosition()
         {
-            Vector3Boxed pos = this.theBloon.Position;
+            Vector3Boxed pos = this.theTower.Position;
             float[] posF = new[] {pos.X, pos.Y, pos.Z};
             return posF;
         }
-        
-        public float getRotation()
-        {
-            return this.theBloon.Rotation;
+
+        public bool isUpgradePurchased(int path, int tier) {
+            return theTower.GetUpgrade(path).tier >= tier;
         }
     }
 }
