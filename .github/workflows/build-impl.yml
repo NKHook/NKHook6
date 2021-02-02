@@ -29,17 +29,23 @@ jobs:
       - name: Setup MSBUILD
         uses: microsoft/setup-msbuild@v1.0.2
       
+      - name: Setup CMake
+        uses: lukka/get-cmake@v3.19.2
+      
       - name: Pull API
         run: git submodule update --init --recursive
       
+      - name: Generate CMake cache
+        run: cmake .
+      
       - name: Build Implementation
-        run: msbuild NKHook6-Impl/NKHook6-Impl.sln /p:Configuration=Release
+        run: cmake --build . --config Release
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v2
         with:
           name: NKHook6-Build
-          path: build\NKHook6_Impl.dll
+          path: Release\NKHook6.dll
       
       - name: Create a Release
         uses: actions/create-release@v1.1.4
@@ -61,6 +67,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: build\NKHook6_Impl.dll
+          asset_path: Release\NKHook6.dll
           asset_name: NKHook6.dll
           asset_content_type: application/dll
