@@ -13,7 +13,7 @@ Our plan here with NKHook6 is to provide novice programmers with the tools neces
 |Bloon Management|❌|
 |Additional Behaviors|❌|
 |Event Patches|❌|
-|Future Proofing|❌|
+|Future Proofing|✔|
 |Dynamic Asset Loading|❌|
 |Network Interactions|❌|
 |Custom GUI|❌|
