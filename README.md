@@ -1,5 +1,5 @@
 # NKHook6
-NKHook6 is a high level BTD6 API while not compromising versatility or ease of use.
+NKHook6 is a high level and portable BTD6 API while not compromising versatility or ease of use.
 
 ![](https://raw.githubusercontent.com/NKHook/NKHook6/main/NKHook.png)
 

@@ -6,6 +6,7 @@ add_library(NKHook6 SHARED)
 set_property(TARGET NKHook6 PROPERTY VS_DOTNET_TARGET_FRAMEWORK_VERSION "v4.7.1")
 set_property(TARGET NKHook6 PROPERTY WIN32_EXECUTABLE FALSE)
 set_property(TARGET NKHook6 PROPERTY VS_CONFIGURATION_TYPE ClassLibrary)
+set_property(TARGET NKHook6 PROPERTY VS_DOTNET_REFERENCES_COPY_LOCAL OFF)
 
-add_subdirectory(References)
 add_subdirectory(NKHook6-Impl)
+add_subdirectory(References)
