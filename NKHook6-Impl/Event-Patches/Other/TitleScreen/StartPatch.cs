@@ -9,7 +9,7 @@ using NKHook6.API;
 
 namespace NKHook6_Impl.Other._TitleScreen
 {
-    [HarmonyPatch(typeof(TitleScreen), "Start")]
+    [HarmonyPatch(typeof(TitleScreen), nameof(TitleScreen.Start))]
     internal class StartPatch
     {
         [HarmonyPostfix]

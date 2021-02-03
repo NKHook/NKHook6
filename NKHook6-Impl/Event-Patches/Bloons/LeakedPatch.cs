@@ -6,7 +6,7 @@ using NKHook6_Impl.Implementations.Bloons;
 
 namespace NKHook6_Impl.Bloons
 {
-    [HarmonyPatch(typeof(Bloon), "Leaked")]
+    [HarmonyPatch(typeof(Bloon), nameof(Bloon.Leaked))]
     internal class LeakedPatch
     {
         [HarmonyPrefix]

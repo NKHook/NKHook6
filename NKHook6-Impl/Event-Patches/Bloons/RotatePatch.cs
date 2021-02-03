@@ -6,7 +6,7 @@ using NKHook6_Impl.Implementations.Bloons;
 
 namespace NKHook6_Impl.Bloons
 {
-    [HarmonyPatch(typeof(Bloon), "SetRotation")]
+    [HarmonyPatch(typeof(Bloon), nameof(Bloon.SetRotation))]
     internal class RotatePatch
     {
         [HarmonyPrefix]

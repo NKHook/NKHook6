@@ -8,7 +8,7 @@ using NKHook6_Impl.Implementations.Bloons;
 
 namespace NKHook6_Impl.Bloons
 {
-    [HarmonyPatch(typeof(Bloon), "Initialise")]
+    [HarmonyPatch(typeof(Bloon), nameof(Bloon.Initialise))]
     internal class CreatedPatch
     {
         [HarmonyPostfix]

@@ -8,15 +8,16 @@ using NKHook6_Impl.Implementations.Towers;
 
 namespace NKHook6_Impl.Towers
 {
-    [HarmonyPatch(typeof(Tower), nameof(Tower.Initialise))]
-    internal class CreatedPatch
+    [HarmonyPatch(typeof(Tower), nameof(Tower.OnDestroy))]
+    internal class DeletedPatch
     {
         [HarmonyPostfix]
-        internal static void Postfix(Tower __instance, Entity target, Model modelToUse)
+        internal static bool Prefix(Tower __instance)
         {
             NTowerEntity towerEntity = new NTowerEntity(__instance);
-            var o = new TowerEvents.CreatedEvent(towerEntity); //Create CreatedEvent instance
+            var o = new TowerEvents.DeletedEvent(towerEntity); //Create DeletedEvent instance
             EventRegistry.instance.dispatchEvent(ref o); //Dispatch it
+            return !o.isCancelled();
         }
     }
 }
