@@ -9,15 +9,22 @@ Our plan here with NKHook6 is to provide novice programmers with the tools neces
 ## Roadmap
 |Feature|Supported|
 |-------|---------|
-|Tower Management|❌|
-|Bloon Management|❌|
+|Tower Management|🔄|
+|Bloon Management|🔄|
+|Tower Implementations|🔄|
+|Bloon Implementations|🔄|
 |Additional Behaviors|❌|
-|Event Patches|❌|
+|Event Patches|🔄|
 |Future Proofing|✔|
 |Dynamic Asset Loading|❌|
 |Network Interactions|❌|
 |Custom GUI|❌|
 |Best API|✔|
+
+Key:
+✔ - Completed
+🔄 - In Progress
+❌ - Incomplete/To Do/Unsupported
 
 ## Credits
 Developers - https://github.com/DisabledMallis & https://github.com/KosmicShovel
