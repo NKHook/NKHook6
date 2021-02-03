@@ -12,12 +12,11 @@ namespace NKHook6_Impl.Towers
     internal class DeletedPatch
     {
         [HarmonyPostfix]
-        internal static bool Prefix(Tower __instance)
+        internal static void Postfix(Tower __instance)
         {
             NTowerEntity towerEntity = new NTowerEntity(__instance);
             var o = new TowerEvents.DeletedEvent(towerEntity); //Create DeletedEvent instance
             EventRegistry.instance.dispatchEvent(ref o); //Dispatch it
-            return !o.isCancelled();
         }
     }
 }

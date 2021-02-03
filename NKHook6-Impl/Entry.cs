@@ -5,7 +5,7 @@ using MelonLoader;
 using NKHook6.API;
 using NKHook6.API.Bloons;
 using NKHook6.API.Events;
-using NKHook6.API.Events._Bloons;
+using NKHook6.API.Events._Towers;
 using NKHook6_Impl.Extensions;
 using NKHook6_Impl.Implementations.Bloons;
 
