@@ -6,7 +6,6 @@ target_sources(NKHook6 PRIVATE
     "NBloon.cs"
     "NBloonEntity.cs"
     "RedBloon.cs"
-    "RedBloonEntity.cs"
     "RedCamoBloon.cs"
     "RedRegrowBloon.cs"
     "RedRegrowCamoBloon.cs"
