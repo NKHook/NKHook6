@@ -1,13 +1,7 @@
-﻿using System.Collections.Generic;
-using Assets.Scripts.Models.Bloons;
-using Assets.Scripts.Unity;
+﻿using Assets.Scripts.Unity;
 using MelonLoader;
 using NKHook6.API;
-using NKHook6.API.Bloons;
 using NKHook6.API.Events;
-using NKHook6.API.Events._Towers;
-using NKHook6_Impl.Extensions;
-using NKHook6_Impl.Implementations.Bloons;
 
 namespace NKHook6_Impl
 {
@@ -26,6 +20,9 @@ namespace NKHook6_Impl
         public void onModLoaded()
         {
             EventRegistry.instance.listen(typeof(Entry));
+            foreach(var bloon in Game.instance.model.bloons) {
+                Logger.Log(bloon.name);
+            }
         }
     }
 }
