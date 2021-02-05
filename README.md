@@ -12,7 +12,7 @@ Our plan here with NKHook6 is to provide novice programmers with the tools neces
 |Tower Management|🔄|
 |Bloon Management|🔄|
 |Tower Implementations|🔄|
-|Bloon Implementations|🔄|
+|Bloon Implementations|✔|
 |Additional Behaviors|❌|
 |Event Patches|🔄|
 |Future Proofing|✔|
