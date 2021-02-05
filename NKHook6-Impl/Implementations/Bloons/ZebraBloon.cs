@@ -5,12 +5,12 @@ using NKHook6_Impl.Extensions;
 
 namespace NKHook6_Impl.Implementations.Bloons
 {
-    public class GreenBloon : NBloon
+    public class ZebraBloon : NBloon
     {
-        public GreenBloon() : base(Game.instance.getBloonModel("Green"))
+        public ZebraBloon() : base(Game.instance.getBloonModel("Zebra"))
         {
         }
-        internal GreenBloon(string modelName) : base(Game.instance.getBloonModel(modelName))
+        internal ZebraBloon(string modelName) : base(Game.instance.getBloonModel(modelName))
         {
         }
     }

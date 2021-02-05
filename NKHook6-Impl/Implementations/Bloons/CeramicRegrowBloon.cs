@@ -5,9 +5,9 @@ using NKHook6_Impl.Extensions;
 
 namespace NKHook6_Impl.Implementations.Bloons
 {
-    public class YellowRegrowBloon : YellowBloon
+    public class CeramicRegrowBloon : CeramicBloon
     {
-        public YellowRegrowBloon() : base("YellowRegrow")
+        public CeramicRegrowBloon() : base("CeramicRegrow")
         {
         }
     }
