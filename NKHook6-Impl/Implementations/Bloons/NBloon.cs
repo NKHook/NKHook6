@@ -6,81 +6,84 @@ namespace NKHook6_Impl.Implementations.Bloons
     public class NBloon : IBloon
     {
         private BloonModel bloonModel;
+        public NBloon()
+        {
+        }
         public NBloon(BloonModel bloonModel)
         {
             this.bloonModel = bloonModel;
         }
-        public string getType()
+        public virtual string getType()
         {
             return this.bloonModel.name;
         }
 
-        public string getBaseType()
+        public virtual string getBaseType()
         {
             return this.bloonModel.baseId;
         }
 
-        public IBloon.Modifier[] getModifiers()
+        public virtual IBloon.Modifier[] getModifiers()
         {
             throw new System.NotImplementedException();
         }
 
-        public IBloon.Immunity[] getImmunities()
+        public virtual IBloon.Immunity[] getImmunities()
         {
             throw new System.NotImplementedException();
         }
 
-        public float getMaxHealth()
+        public virtual float getMaxHealth()
         {
             return this.bloonModel.maxHealth;
         }
 
-        public float getLeakDamage()
+        public virtual float getLeakDamage()
         {
             return this.bloonModel.leakDamage;
         }
 
-        public bool isInvulnerable()
+        public virtual bool isInvulnerable()
         {
             return this.bloonModel.isInvulnerable;
         }
 
-        public float getSpeed()
+        public virtual float getSpeed()
         {
             return this.bloonModel.speed;
         }
 
-        public float getSpeedFrames()
+        public virtual float getSpeedFrames()
         {
             return this.bloonModel.speedFrames;
         }
 
-        public float getRadius()
+        public virtual float getRadius()
         {
             return this.bloonModel.radius;
         }
 
-        public float getDanger()
+        public virtual float getDanger()
         {
             return this.bloonModel.danger;
         }
 
-        public bool isRotateable()
+        public virtual bool isRotateable()
         {
             return this.bloonModel.rotate;
         }
 
-        public string getIcon()
+        public virtual string getIcon()
         {
             throw new System.NotImplementedException();
         }
 
-        public string getDisplay()
+        public virtual string getDisplay()
         {
             throw new System.NotImplementedException();
         }
 
-        public string[] getTags()
+        public virtual string[] getTags()
         {
             return this.bloonModel.tags;
         }

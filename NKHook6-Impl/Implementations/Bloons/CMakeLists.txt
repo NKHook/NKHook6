@@ -69,5 +69,4 @@ target_sources(NKHook6 PRIVATE
     "DdtCamoBloon.cs"
     "BadBloon.cs"
     "BadFortifiedBloon.cs"
-    "TestBloon.cs"
 )
