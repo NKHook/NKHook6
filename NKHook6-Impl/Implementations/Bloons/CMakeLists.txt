@@ -13,4 +13,8 @@ target_sources(NKHook6 PRIVATE
     "RedCamoBloon.cs"
     "RedRegrowBloon.cs"
     "RedRegrowCamoBloon.cs"
+    "YellowBloon.cs"
+    "YellowCamoBloon.cs"
+    "YellowRegrowBloon.cs"
+    "YellowRegrowCamoBloon.cs"
 )
