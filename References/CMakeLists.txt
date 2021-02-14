@@ -36,7 +36,7 @@ set_property(TARGET NKHook6 PROPERTY VS_DOTNET_REFERENCES
         ${CMAKE_CURRENT_LIST_DIR}/Il2CppSystem.Runtime.Serialization.dll;
         ${CMAKE_CURRENT_LIST_DIR}/Il2CppSystem.Xml.dll;
         ${CMAKE_CURRENT_LIST_DIR}/Il2CppSystem.Xml.Linq.dll;
-        ${CMAKE_CURRENT_LIST_DIR}/MelonLoader.ModHandler.dll;
+        ${CMAKE_CURRENT_LIST_DIR}/MelonLoader.dll;
         ${CMAKE_CURRENT_LIST_DIR}/Microsoft.CSharp.dll;
         ${CMAKE_CURRENT_LIST_DIR}/Microsoft.Web.Infrastructure.dll;
         ${CMAKE_CURRENT_LIST_DIR}/Mono.CompilerServices.SymbolWriter.dll;

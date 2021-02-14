@@ -24,13 +24,11 @@ namespace NKHook6_Impl
 
         public void onModLoaded()
         {
-            Logger.Log("Loading at modstart...");
             EventRegistry.instance.listen(typeof(Entry));
             //BloonRegistry.instance += new ModBloon();
             foreach(var bloon in Game.instance.model.bloons) {
                 Logger.Log(bloon.name);
             }
-            Logger.Log("Loaded at modstart");
         }
     }
 }
