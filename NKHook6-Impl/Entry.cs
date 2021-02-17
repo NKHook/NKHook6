@@ -1,6 +1,6 @@
 ﻿using MelonLoader;
 using NKHook6.API;
-using NKHook6.API.Events;
+using NKHook6.API.Registry;
 
 namespace NKHook6_Impl
 {

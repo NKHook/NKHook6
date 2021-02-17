@@ -2,6 +2,7 @@
 using Harmony;
 using NKHook6.API.Events;
 using NKHook6.API.Events._Bloons;
+using NKHook6.API.Registry;
 using NKHook6_Impl.Implementations.Bloons;
 
 namespace NKHook6_Impl.Bloons

@@ -5,6 +5,7 @@ using KHook6_Impl.Implementations.Game;
 using NKHook6.API.Events;
 using NKHook6.API.Events._Game;
 using NKHook6.API.Game;
+using NKHook6.API.Registry;
 
 namespace NKHook6_Impl.Game
 {

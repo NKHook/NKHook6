@@ -3,6 +3,7 @@ using Assets.Scripts.Simulation.Towers;
 using Harmony;
 using NKHook6.API.Events;
 using NKHook6.API.Events._Towers;
+using NKHook6.API.Registry;
 using NKHook6_Impl.Implementations.Towers;
 
 namespace NKHook6_Impl.Towers
