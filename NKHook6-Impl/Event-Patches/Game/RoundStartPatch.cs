@@ -1,3 +1,4 @@
+using Assets.Scripts.Unity.Bridge;
 using Assets.Scripts.Unity.UI_New.InGame;
 using Harmony;
 using KHook6_Impl.Implementations.Game;
@@ -7,14 +8,14 @@ using NKHook6.API.Game;
 
 namespace NKHook6_Impl.Game
 {
-    [HarmonyPatch(typeof(InGame), nameof(InGame.StartRound))]
+    [HarmonyPatch(typeof(UnityToSimulation), nameof(UnityToSimulation.StartRound))]
     internal class RoundStartPatch
     {
         [HarmonyPrefix]
-        internal static void Prefix(InGame __instance)
+        internal static void Prefix(UnityToSimulation __instance)
         {
             IGameInstance gameInstance = NGameInstance.GetGame();
-            int currentRound = __instance.bridge.simulation.GetCurrentRound()+1;
+            int currentRound = __instance.simulation.GetSpawnedRound()+1;
             var o = new GameEvents.RoundStartEvent(gameInstance, currentRound); //Create RoundStartEvent instance
             EventRegistry.instance.DispatchEvent(ref o); //Dispatch it
         }
