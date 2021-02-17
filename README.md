@@ -6,6 +6,9 @@ NKHook6 is a high level and portable BTD6 API while not compromising versatility
 ## Purpose
 Our plan here with NKHook6 is to provide novice programmers with the tools necessary to get them started.
 
+## Why NKHook6
+Most other mod "Apis" for Bloons TD 6 really don't do much for the mod maker. NKHook6 on the other hand, follows a standard set by the [NKHook6 API](https://github.com/NKHook/NKHook6-API) repository. Every other "api" at the time of writing this README does not have such a standard, and as a result leads to some rather... "interesting" "api" design. You may have noticed that I've put quotes around every time I've mentioned "api" when talking about other projects.
+
 ## Roadmap
 |Feature|Supported|
 |-------|---------|

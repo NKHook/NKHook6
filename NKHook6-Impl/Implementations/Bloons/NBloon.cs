@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Models.Bloons;
+﻿using CGame = Assets.Scripts.Unity.Game;
+using Assets.Scripts.Models.Bloons;
 using NKHook6.API.Bloons;
 
 namespace NKHook6_Impl.Implementations.Bloons

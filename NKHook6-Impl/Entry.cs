@@ -6,6 +6,7 @@ using NKHook6.API.Events;
 using NKHook6.API.Events._Bloons;
 using NKHook6_Impl.Implementations.Bloons;
 using NKHook6.API.Registry;
+using NKHook6.API.Events._Game;
 
 namespace NKHook6_Impl
 {
@@ -21,13 +22,15 @@ namespace NKHook6_Impl
             Logger.Log("Google translate of NKHook6 API to TARGET has begun".Replace("TARGET", "BloonsTD6"));
         }
 
+        [EventAttribute("RoundStartEvent")]
+        public static void onRound(GameEvents.RoundStartEvent e)
+        {
+            Logger.Log("Round: "+e.round);
+        }
+
         public void OnModLoaded()
         {
             EventRegistry.instance.Listen(typeof(Entry));
-            //BloonRegistry.instance += new ModBloon();
-            foreach(var bloon in Game.instance.model.bloons) {
-                Logger.Log(bloon.name);
-            }
         }
     }
 }
