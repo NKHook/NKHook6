@@ -28,9 +28,15 @@ namespace KHook6_Impl.Implementations.Game
             this.inGame = inGame;
         }
 
+        public InGame GetNative()
+        {
+            return inGame;
+        }
+
+
         public double GetHealth()
         {
-            throw new System.NotImplementedException();
+            return inGame.bridge.GetHealth();
         }
 
         public IMap GetMap()
@@ -50,7 +56,7 @@ namespace KHook6_Impl.Implementations.Game
 
         public void Lose()
         {
-            throw new System.NotImplementedException();
+            inGame.Loose();
         }
 
         public void SetHealth(double value)
