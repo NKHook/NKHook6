@@ -22,7 +22,7 @@ namespace NKHook6_Impl.Implementations.Towers
             var types = Assembly
                 .GetExecutingAssembly()
                 .GetTypes()
-                .Where(t => t.Namespace.StartsWith("NKHook6_Impl.Implementations.Bloons"));
+                .Where(t => t.Namespace.StartsWith("NKHook6_Impl.Implementations.Towers"));
 
             foreach (Type classType in types)
             {
