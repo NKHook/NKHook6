@@ -16,7 +16,7 @@ namespace NKHook6_Impl.Implementations.Towers
             this.theTower = theTower;
         }
 
-        public ITower GetTower()
+        new public ITower GetType()
         {
             string className = theTower.towerModel.name+"Tower";
             var types = Assembly
