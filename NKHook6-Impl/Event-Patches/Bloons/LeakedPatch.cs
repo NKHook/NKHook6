@@ -14,8 +14,8 @@ namespace NKHook6_Impl.Bloons
         {
             NBloonEntity bloonEntity = new NBloonEntity(__instance);
             var o = new BloonEvents.LeakedEvent(bloonEntity); //Create LeakedEvent instance
-            EventRegistry.instance.dispatchEvent(ref o); //Dispatch it
-            return !o.isCancelled();
+            EventRegistry.instance.DispatchEvent(ref o); //Dispatch it
+            return !o.IsCancelled();
         }
     }
 }

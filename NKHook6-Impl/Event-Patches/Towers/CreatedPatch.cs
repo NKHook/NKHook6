@@ -16,7 +16,7 @@ namespace NKHook6_Impl.Towers
         {
             NTowerEntity towerEntity = new NTowerEntity(__instance);
             var o = new TowerEvents.CreatedEvent(towerEntity); //Create CreatedEvent instance
-            EventRegistry.instance.dispatchEvent(ref o); //Dispatch it
+            EventRegistry.instance.DispatchEvent(ref o); //Dispatch it
         }
     }
 }

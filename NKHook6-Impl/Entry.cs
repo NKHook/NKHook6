@@ -21,9 +21,9 @@ namespace NKHook6_Impl
             Logger.Log("Google translate of NKHook6 API to TARGET has begun".Replace("TARGET", "BloonsTD6"));
         }
 
-        public void onModLoaded()
+        public void OnModLoaded()
         {
-            EventRegistry.instance.listen(typeof(Entry));
+            EventRegistry.instance.Listen(typeof(Entry));
             //BloonRegistry.instance += new ModBloon();
             foreach(var bloon in Game.instance.model.bloons) {
                 Logger.Log(bloon.name);

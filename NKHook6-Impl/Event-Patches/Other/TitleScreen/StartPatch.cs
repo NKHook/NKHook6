@@ -21,7 +21,7 @@ namespace NKHook6_Impl.Other._TitleScreen
                 if (mod is BTDModStart)
                 {
                     BTDModStart modStart = (BTDModStart)mod;
-                    modStart.onModLoaded();
+                    modStart.OnModLoaded();
                 }
             }
         }

@@ -16,7 +16,7 @@ namespace NKHook6_Impl.Bloons
         {
             NBloonEntity bloonEntity = new NBloonEntity(__instance);
             var o = new BloonEvents.CreatedEvent(bloonEntity); //Create CreatedEvent instance
-            EventRegistry.instance.dispatchEvent(ref o); //Dispatch it
+            EventRegistry.instance.DispatchEvent(ref o); //Dispatch it
         }
     }
 }

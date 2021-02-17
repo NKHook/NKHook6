@@ -14,11 +14,11 @@ namespace NKHook6_Impl.Bloons
         {
             NBloonEntity bloonEntity = new NBloonEntity(__instance);
             var o = new BloonEvents.RotateEvent(bloonEntity, rotation); //Create RotateEvent instance
-            if (rotation != bloonEntity.getRotation())
+            if (rotation != bloonEntity.GetRotation())
             {
-                EventRegistry.instance.dispatchEvent(ref o); //Dispatch it
+                EventRegistry.instance.DispatchEvent(ref o); //Dispatch it
             }
-            return !o.isCancelled();
+            return !o.IsCancelled();
         }
     }
 }

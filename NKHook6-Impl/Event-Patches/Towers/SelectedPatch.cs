@@ -14,8 +14,8 @@ namespace NKHook6_Impl.Towers
         {
             NTowerEntity towerEntity = new NTowerEntity(__instance.tower);
             var o = new TowerEvents.SelectedEvent(towerEntity); //Create SelectedPatch instance
-            EventRegistry.instance.dispatchEvent(ref o); //Dispatch it
-            return !o.isCancelled();
+            EventRegistry.instance.DispatchEvent(ref o); //Dispatch it
+            return !o.IsCancelled();
         }
     }
 }

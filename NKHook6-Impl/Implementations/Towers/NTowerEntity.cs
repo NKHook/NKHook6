@@ -16,7 +16,7 @@ namespace NKHook6_Impl.Implementations.Towers
             this.theTower = theTower;
         }
 
-        public ITower getTower()
+        public ITower GetTower()
         {
             string className = theTower.towerModel.name+"Tower";
             var types = Assembly
@@ -36,14 +36,14 @@ namespace NKHook6_Impl.Implementations.Towers
             return new NTower(this.theTower.towerModel);
         }
 
-        public float[] getPosition()
+        public float[] GetPosition()
         {
             Vector3Boxed pos = this.theTower.Position;
             float[] posF = new[] {pos.X, pos.Y, pos.Z};
             return posF;
         }
 
-        public bool isUpgradePurchased(int path, int tier) {
+        public bool IsUpgradePurchased(int path, int tier) {
             return theTower.GetUpgrade(path).tier >= tier;
         }
     }

@@ -15,8 +15,8 @@ namespace NKHook6_Impl.Towers
         {
             NTowerEntity towerEntity = new NTowerEntity(tower);
             var o = new TowerEvents.SoldEvent(towerEntity, tower.SaleValue); //Create SoldPatch instance
-            EventRegistry.instance.dispatchEvent(ref o); //Dispatch it
-            return !o.isCancelled();
+            EventRegistry.instance.DispatchEvent(ref o); //Dispatch it
+            return !o.IsCancelled();
         }
     }
 }

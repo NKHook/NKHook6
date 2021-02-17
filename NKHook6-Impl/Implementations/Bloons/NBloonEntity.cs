@@ -16,7 +16,7 @@ namespace NKHook6_Impl.Implementations.Bloons
             this.theBloon = theBloon;
         }
 
-        public IBloon getType()
+        new public IBloon GetType()
         {
             string className = theBloon.bloonModel.name+"Bloon";
             var types = Assembly
@@ -36,19 +36,19 @@ namespace NKHook6_Impl.Implementations.Bloons
             return new NBloon(theBloon.bloonModel);
         }
 
-        public float getProgress()
+        public float GetProgress()
         {
             return this.theBloon.distanceTraveled;
         }
 
-        public float[] getPosition()
+        public float[] GetPosition()
         {
             Vector3Boxed pos = this.theBloon.Position;
             float[] posF = new[] {pos.X, pos.Y, pos.Z};
             return posF;
         }
         
-        public float getRotation()
+        public float GetRotation()
         {
             return this.theBloon.Rotation;
         }
