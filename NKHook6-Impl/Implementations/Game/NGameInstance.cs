@@ -7,6 +7,7 @@ namespace KHook6_Impl.Implementations.Game
     public class NGameInstance : IGameInstance
     {
         private static NGameInstance gameInstance;
+        private static NPlayer[] nPlayers = { new NPlayer() };
         public static NGameInstance GetGame()
         {
             if(gameInstance == null)
@@ -46,12 +47,12 @@ namespace KHook6_Impl.Implementations.Game
 
         public IPlayer GetPlayer()
         {
-            throw new System.NotImplementedException();
+            return GetPlayer(0);
         }
 
         public IPlayer GetPlayer(int index)
         {
-            throw new System.NotImplementedException();
+            return nPlayers[index];
         }
 
         public void Lose()
