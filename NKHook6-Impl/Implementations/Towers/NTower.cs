@@ -17,8 +17,8 @@ namespace NKHook6_Impl.Implementations.Towers
         /// The tower's type. This can be a custom type if it is a modded tower
         /// </summary>
         /// <returns>The tower's type</returns>
-        new public string GetType() {
-            return this.towerModel.name;
+        public new string GetType() {
+            return towerModel.name;
         }
         /// <summary>
         /// Returns the upgrade of the tower
@@ -34,14 +34,14 @@ namespace NKHook6_Impl.Implementations.Towers
         /// </summary>
         /// <returns>The base cost of the tower</returns>
         public double GetCost() {
-            return this.towerModel.cost;
+            return towerModel.cost;
         }
         /// <summary>
         /// Determines if the tower can be placed in water
         /// </summary>
         /// <returns>True if it can, false if not</returns>
         public bool CanPlaceOnWater() {
-            return this.towerModel.IsWaterBased();
+            return towerModel.IsWaterBased();
         }
         /// <summary>
         /// Determines if the tower can be placed on land

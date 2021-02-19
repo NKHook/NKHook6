@@ -1,6 +1,9 @@
-﻿using MelonLoader;
+﻿using System;
+using Assets.Scripts.Unity.UI_New.InGame;
+using MelonLoader;
 using NKHook6.API;
 using NKHook6.API.Registry;
+using NKHook6_Impl.Extensions;
 
 namespace NKHook6_Impl
 {
@@ -16,8 +19,7 @@ namespace NKHook6_Impl
             Logger.Log("Google translate of NKHook6 API to TARGET has begun".Replace("TARGET", "BloonsTD6"));
         }
 
-        public void OnModLoaded()
-        {
+        public void OnModLoaded() {
             EventRegistry.instance.Listen(typeof(Entry));
         }
     }

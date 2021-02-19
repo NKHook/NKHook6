@@ -14,9 +14,9 @@ namespace KHook6_Impl.Implementations.Game
                 InGame inGame = InGame.instance;
                 if(inGame == null)
                 {
-                    throw new Exception("Cannot get NGameInstance without being in a game!");
+                    throw new("Cannot get NGameInstance without being in a game!");
                 }
-                gameInstance = new NGameInstance(inGame);
+                gameInstance = new(inGame);
             }
             return gameInstance;
         }
@@ -59,9 +59,8 @@ namespace KHook6_Impl.Implementations.Game
             inGame.Loose();
         }
 
-        public void SetHealth(double value)
-        {
-            throw new System.NotImplementedException();
+        public void SetHealth(double value) {
+            inGame.bridge.simulation.health.Value = value;
         }
     }
 }
